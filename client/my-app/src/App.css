@@ -252,5 +252,29 @@ body {
 }
 
 
+.looking {
+    display: inline-block; /* Ensures the background only wraps around the text */
+    width: 150px;
+    height: 60px;
+    background-color: #86aacb; /* Example color, you can change this */
+    color: white; /* Text color */
+    margin: 0px; /* Adds some space around the text */
+    border-radius: 0.5em; /* Rounds the background */
+    font-size: 1rem; /* Adjust text size as needed */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text */
+}
 
+.needed {
+    display: inline-block; /* Ensures the background only wraps around the text */
+    width: 150px;
+    height: 60px;
+    background-color: #c986cb; /* Example color, you can change this */
+    color: white; /* Text color */
+    margin: 0px; /* Adds some space around the text */
+    border-radius: 0.5em; /* Rounds the background */
+    font-size: 1rem; /* Adjust text size as needed */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text */
+}
 

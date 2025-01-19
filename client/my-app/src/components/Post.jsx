@@ -4,7 +4,9 @@ export default function Post({ post }) {
     if (post.post_type == "look_for_work") {
         return (
             <div className="post-card">
-                <h3 className="looking">Looking for work</h3>
+                <div className="looking">
+                    <h4>Looking for work</h4>
+                </div>
                 <p>{post.content}</p>
                 <small>
                     Posted by: {post.user_firstname} {post.user_lastname}
@@ -19,7 +21,9 @@ export default function Post({ post }) {
     }
     return (
         <div className="post-card">
-            <h3 className="needed">Helper needed</h3>
+            <div className="needed">
+                <h4>Helper Needed</h4>
+            </div>
             <p>{post.content}</p>
             <small>
                 Posted by: {post.user_firstname} {post.user_lastname}
