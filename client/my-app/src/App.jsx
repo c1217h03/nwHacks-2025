@@ -8,11 +8,8 @@ import LoginPage from './components/LoginPage'
 
 function App() {
   return (
-    <>
-      <LandingPage />
-    </>
-
-  )
+    <LandingPage />
+  );
 }
 
-export default App
+export default App;
