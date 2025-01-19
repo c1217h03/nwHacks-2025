@@ -1,4 +1,5 @@
 import React from "react"
+// import LoginPage from '. /LoginPage'
 
 export default function LandingPage() {
     return (
@@ -7,7 +8,6 @@ export default function LandingPage() {
                 <h1>Welcome to Our App!</h1>
                 <h4>Let's build a stronger community with all generations</h4>
                 <div>
-                    <button style={{ margin: '10px', padding: '10px 20px' }}>Sign Up</button>
                     <button style={{ margin: '10px', padding: '10px 20px' }}>Log In</button>
                 </div>
             </div>
