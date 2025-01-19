@@ -1,4 +1,5 @@
-CREATE TABLE "user"(
+-- Create the "user" table
+CREATE TABLE "user" (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(50),
     firstname TEXT,
@@ -6,32 +7,32 @@ CREATE TABLE "user"(
     UNIQUE (email)
 );
 
-CREATE TABLE child(
+-- Create the "child" table
+CREATE TABLE child (
     child_id SERIAL PRIMARY KEY,
     firstname TEXT,
     interests TEXT,
     user_id INT,
-        CONSTRAINT fk_user_child
+    CONSTRAINT fk_user_child
         FOREIGN KEY (user_id)
         REFERENCES "user"(user_id)
         ON DELETE CASCADE
-)
+);
 
-CREATE TABLE post(
+-- Create the "post" table
+CREATE TABLE post (
     post_id SERIAL PRIMARY KEY,
     post_type TEXT,
     content TEXT,
-    user_id INT
-        CONSTRAINT fk_user_post
+    user_id INT,
+    CONSTRAINT fk_user_post
         FOREIGN KEY (user_id)
         REFERENCES "user"(user_id)
         ON DELETE CASCADE,
-    child_id INT
-        CONSTRAINT fk_child_post
+    child_id INT,
+    CONSTRAINT fk_child_post
         FOREIGN KEY (child_id)
         REFERENCES child(child_id)
         ON DELETE CASCADE,
     post_status BOOLEAN NOT NULL
-)
-
-
+);
