@@ -8,6 +8,7 @@ import LoginPage from './components/LoginPage'
 import KidsList from './components/KidsList'
 import PostingPage from './components/PostingPage'
 import ProfilePage from './components/ProfilePage'
+import ChatWindow from './components/ChatWindow'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<PostingPage />} />
         <Route path="/kids" element={<KidsList />} />
         <Route path="/userprofile" element={<ProfilePage />} />
+        {/* <Route path="/chatwindow" element={<ChatWindow />} /> */}
       </Routes>
     </Router>
   );
