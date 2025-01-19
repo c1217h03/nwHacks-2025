@@ -214,12 +214,33 @@ body {
 }
 
 /* Post Card Styling */
+/* .post-card { */
+/* position: relative;
+    display: flex;
+    flex-direction: column; */
+/* Stack elements inside each post card */
+/* gap: 10px; */
+/* Space between elements inside the card */
+/* padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; */
+/* Ensure each post takes full width of its container */
+/* max-width: 1200px; */
+/* Set max width */
+/* margin: 0 auto; */
+/* Center align the post cards */
+/* } */
+
 .post-card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    /* Stack elements inside each post card */
     gap: 10px;
-    /* Space between elements inside the card */
+    /* Space between elements */
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -227,11 +248,11 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
-    /* Ensure each post takes full width of its container */
+    /* Full width of container */
     max-width: 1200px;
     /* Set max width */
     margin: 0 auto;
-    /* Center align the post cards */
+    /* Center align */
 }
 
 .post-card:hover {
@@ -274,6 +295,10 @@ body {
     /* Optional, for spacing around the content */
     box-sizing: border-box;
     /* Ensure padding and margins are calculated correctly */
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+
 }
 
 .posts-page {
@@ -299,6 +324,7 @@ body {
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    width: 70%;
 }
 
 /* Post Card Styling */
@@ -452,24 +478,41 @@ body {
 
 .child_image {
     width: 100%;
-    max-width: 150px; /* Set a max width to control size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10%; /* Slightly rounded corners */
-    margin-bottom: 10px; /* Add space below the image */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
-    object-fit: cover; /* Crop image nicely if it doesn't fit dimensions */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover */
+    max-width: 150px;
+    /* Set a max width to control size */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10%;
+    /* Slightly rounded corners */
+    margin-bottom: 10px;
+    /* Add space below the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add a soft shadow */
+    object-fit: cover;
+    /* Crop image nicely if it doesn't fit dimensions */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Smooth transitions for hover */
 }
 
 .child-card-content {
-    display:flex;
+    display: flex;
     justify-content: space-around;
 
 }
 
-.child-card-name-int{
-    display:flex;
+.child-card-name-int {
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
+}
+
+.chat-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.chat-window {
+    width: 30%;
 }
