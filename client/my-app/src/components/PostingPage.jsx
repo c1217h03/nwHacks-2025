@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './Header';
+import Post from './Post';
 
 export default function PostingPage() {
     const [posts, setPosts] = useState([]);
@@ -29,18 +30,7 @@ export default function PostingPage() {
                     posts.length > 0 ? (
                         <div className="post-list">
                             {posts.map(post => (
-                                <div key={post.post_id} className="post-card">
-                                    <h3>{post.post_type}</h3>
-                                    <p>{post.content}</p>
-                                    <small>
-                                        Posted by: {post.user_firstname} {post.user_lastname}
-                                    </small>
-                                    {post.child_firstname && (
-                                        <div className="child-info">
-                                            <strong>Child: </strong>{post.child_firstname}
-                                        </div>
-                                    )}
-                                </div>
+                                <Post key={post.post_id} post={post} />
                             ))}
                         </div>
                     ) : (
