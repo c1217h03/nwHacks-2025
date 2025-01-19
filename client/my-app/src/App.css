@@ -66,13 +66,11 @@ body {
 .kids {
     display: flex;
     flex-wrap: wrap;
-    /* Allow wrapping of child cards */
-    gap: 20px;
-    /* Space between child cards */
-    justify-content: flex-start;
-    /* left align rows */
+    gap: 20px;  /* Space between child cards */
+    justify-content: space-between;  /* Evenly space cards across rows */
+    align-content: space-between;  /* Ensure cards are evenly spaced vertically */
     padding: 20px;
-    /* Add some padding around the content */
+    
 }
 
 .child-card {
