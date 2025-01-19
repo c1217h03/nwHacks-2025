@@ -58,16 +58,19 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-
 .kids {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping of child cards */
+    gap: 20px; /* Space between child cards */
+    justify-content: flex-start; /* left align rows */
+    padding: 20px; /* Add some padding around the content */
 }
 
-/* Child Card Styles */
 .child-card {
-    margin-bottom: 20px;
+    flex: 1 1 calc(33.333% - 40px); /* 3 cards per row, with gap adjustment */
+    max-width: calc(33.333% - 40px); /* Prevent cards from growing too large */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    margin: 0; /* Ensure no extra margins */
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -81,11 +84,3 @@ body {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.child-card p {
-    font-size: 16px;
-    margin: 8px 0;
-}
-
-.child-card strong {
-    color: #333;
-}
