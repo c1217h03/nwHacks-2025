@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage'
 import LoginPage from './components/LoginPage'
 import KidsList from './components/KidsList'
 import PostingPage from './components/PostingPage'
+import ProfilePage from './components/ProfilePage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/home" element={<PostingPage />} />
         <Route path="/kids" element={<KidsList />} />
+        <Route path="/userprofile" element={<ProfilePage />} />
       </Routes>
     </Router>
   );
