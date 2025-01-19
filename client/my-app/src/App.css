@@ -1,9 +1,71 @@
+/* Global Styles */
 html,
 body {
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Navbar Styles */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000;  /* Ensure navbar stays on top */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-buttons button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background-color: #777;
+}
+
+/* Body Content */
+.kids-list-body {
+    width: 100%; /* Take full width of the screen */
+    padding-top: 70px;  /* Add space below navbar */
+    box-sizing: border-box;  /* Prevents content from overflowing */
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+.kids-list {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kids {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Child Card Styles */
 .child-card {
     margin-bottom: 20px;
     padding: 15px;
@@ -26,11 +88,4 @@ body {
 
 .child-card strong {
     color: #333;
-}
-
-.kids-list-body {
-    width: 60vw;  /* Ensure it takes full width of the screen */
-    margin-top: 800px;  /* Add some padding at the top to prevent overlap with the navbar */
-    box-sizing: border-box;  /* To include padding in the width calculation */
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
