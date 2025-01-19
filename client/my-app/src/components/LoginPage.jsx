@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function LoginPage() {
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw' }}>
@@ -10,7 +12,9 @@ export default function LoginPage() {
                     <label for="password">Community Code:</label>
                     <input type="password" id="password" name="password"
                         placeholder="Enter your community code" required />
-                    <button type="submit"> Submit </button>
+                    <Link to="/home">
+                        <button type="submit"> Submit </button>
+                    </Link>
                 </div>
             </div>
         </div>
