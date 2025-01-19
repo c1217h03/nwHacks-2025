@@ -7,7 +7,6 @@ export default function KidsList() {
     const [children, setChildren] = useState([]);  // State to store fetched children data
     const [error, setError] = useState(null);       // State to handle errors
 
-
     // Fetch children data when the component mounts
     useEffect(() => {
         axios.get('http://127.0.0.1:5000/child')  // Replace with your actual API URL
@@ -24,8 +23,9 @@ export default function KidsList() {
     return (
         <div className="kids-list">
             <Header />
-
+            
             <div className="kids-list-body">
+                <h2 className="community-title">Community Helpers</h2>
                 <div className="kids">
                     {error ? (
                         <p>{error}</p>  // Display error message if any error occurs
