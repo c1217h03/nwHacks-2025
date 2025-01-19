@@ -6,7 +6,8 @@ export default function LandingPage() {
     return (
         <div class="landing-page" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw' }}>
             <div style={{ textAlign: 'center' }}>
-                <h1>Welcome to Our App!</h1>
+                {/* <h1>Play Link!</h1> */}
+                <img src="../../public/name.png"></img>
                 <h4>Let's build a stronger community with all generations</h4>
                 <div>
                     <Link to="/login">
