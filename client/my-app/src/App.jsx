@@ -6,16 +6,18 @@ import './App.css'
 import LandingPage from './components/LandingPage'
 import LoginPage from './components/LoginPage'
 import KidsList from './components/KidsList'
+import PostingPage from './components/PostingPage'
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<LandingPage />} />
-    //     <Route path="/login" element={<LoginPage />} />
-    //   </Routes>
-    // </Router>
-    <KidsList />
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/home" element={<PostingPage />} />
+        <Route path="/kids" element={<KidsList />} />
+      </Routes>
+    </Router>
   );
 }
 
