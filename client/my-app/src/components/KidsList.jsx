@@ -13,16 +13,9 @@ export default function KidsList() {
             </div >
 
             <div class="kids-list-body">
-                <div class="profile-side">
-                    <div class="profile-sideheader">
 
-                    </div>
+                <Kids />
 
-                </div>
-
-                <div class="kids">
-                    <Kids />
-                </div>
             </div>
 
 

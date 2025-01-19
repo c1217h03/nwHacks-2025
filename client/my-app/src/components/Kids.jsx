@@ -1,7 +1,7 @@
 export default function Kids() {
     return (
         <>
-            <div></div>
+            <div class="kids-component"></div>
         </>
     )
 
