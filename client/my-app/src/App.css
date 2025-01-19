@@ -449,3 +449,26 @@ body {
     /* Optional: full viewport height */
     background-color: rgba(132, 86, 86, 0.47);
 }
+
+.child_image {
+    width: 100%;
+    max-width: 150px; /* Set a max width to control size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Add space below the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    object-fit: cover; /* Crop image nicely if it doesn't fit dimensions */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover */
+}
+
+.child-card-content {
+    display:flex;
+    justify-content: space-around;
+
+}
+
+.child-card-name-int{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
