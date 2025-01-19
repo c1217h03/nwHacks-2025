@@ -24,10 +24,11 @@ export default function Header() {
                             <UserCircle size={24} />
                         </button>
                     </Link>
-                    <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>
-                        <LogOut size={24}></LogOut>
-                    </button>
-
+                    <Link to="/">
+                        <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>
+                            <LogOut size={24}></LogOut>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
