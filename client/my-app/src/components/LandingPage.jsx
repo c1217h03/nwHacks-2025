@@ -1,5 +1,6 @@
 import React from "react"
 // import LoginPage from '. /LoginPage'
+import { Link } from 'react-router-dom'
 
 export default function LandingPage() {
     return (
@@ -8,7 +9,9 @@ export default function LandingPage() {
                 <h1>Welcome to Our App!</h1>
                 <h4>Let's build a stronger community with all generations</h4>
                 <div>
-                    <button style={{ margin: '10px', padding: '10px 20px' }}>Log In</button>
+                    <Link to="/login">
+                        <button style={{ margin: '10px', padding: '10px 20px' }}>Log In</button>
+                    </Link>
                 </div>
             </div>
         </div>
