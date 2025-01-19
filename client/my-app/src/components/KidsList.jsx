@@ -18,6 +18,7 @@ export default function KidsList() {
                 setError('Error fetching children data');  // Handle errors
                 console.error(error);
             });
+            document.title = 'All Children';
     }, []);  // Empty dependency array to run only once when the component mounts
 
     return (
