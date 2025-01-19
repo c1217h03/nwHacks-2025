@@ -185,7 +185,8 @@ def get_all_children():
                 "child_id": child[0],
                 "firstname": child[1],
                 "interests": child[2],
-                "user_id": child[3]
+                "user_id": child[3],
+                "file_path": child[4]
             }
             for child in children
         ]
