@@ -19,9 +19,11 @@ export default function Header() {
                             <UserRoundIcon size={24} />
                         </button>
                     </Link>
-                    <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>
-                        <UserCircle size={24} />
-                    </button>
+                    <Link to="/userprofile">
+                        <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>
+                            <UserCircle size={24} />
+                        </button>
+                    </Link>
                     <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>Logout</button>
 
                 </div>

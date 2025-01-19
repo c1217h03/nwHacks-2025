@@ -24,7 +24,6 @@ export default function KidsList() {
         <div className="kids-list">
             <Header />
 
-
             <div className="kids-list-body">
                 <div className="kids">
                     {error ? (
