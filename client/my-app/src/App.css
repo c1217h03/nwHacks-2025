@@ -207,31 +207,24 @@ body {
 .post-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* Space between each post card */
-    padding: 20px;
-    /* Add padding around content */
+    gap: 20px; /* Space between each post card */
+    padding: 20px; /* Add padding around content */
 }
 
 /* Post Card Styling */
 .post-card {
     display: flex;
-    flex-direction: column;
-    /* Stack elements inside each post card */
-    gap: 10px;
-    /* Space between elements inside the card */
+    flex-direction: column; /* Stack elements inside each post card */
+    gap: 10px; /* Space between elements inside the card */
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%;
-    /* Ensure each post takes full width of its container */
-    max-width: 1200px;
-    /* Set max width */
-    margin: 0 auto;
-    /* Center align the post cards */
+    width: 100%; /* Ensure each post takes full width of its container */
+    max-width: 1200px; /* Set max width */
+    margin: 0 auto; /* Center align the post cards */
 }
 
 .post-card:hover {
@@ -257,6 +250,131 @@ body {
     font-size: 0.9em;
     color: #777;
 }
+
+
+
+.posting-page-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.posting-page {
+    margin-top: 70px; /* Adjust this value based on the header's height */
+    padding: 20px; /* Optional, for spacing around the content */
+    box-sizing: border-box; /* Ensure padding and margins are calculated correctly */
+}
+
+.posts-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.error-message,
+.loading-message {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Post List Styling */
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Post Card Styling */
+.post-card {
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.post-content {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.post-author {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Tags Styling */
+.post-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.tag-looking {
+    background-color: #5bc0de;
+}
+
+.tag-needed {
+    background-color: #f0ad4e;
+}
+
+/* Child Info Styling */
+.child-info {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.profile-header h1 {
+    margin-top: 120px;
+    margin-bottom: 0;
+}
+
+.children-list {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.avatars-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+}
+
 
 .child-avatar {
     width: 80px;
@@ -320,33 +438,4 @@ body {
     /* left: 50%; */
     /* transform: translate(-50%, -50%); */
 
-}
-
-.profile-header {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    text-align: center;
-}
-
-.profile-header h1 {
-    margin-top: 120px;
-    margin-bottom: 0;
-}
-
-.children-list {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.avatars-container {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
 }

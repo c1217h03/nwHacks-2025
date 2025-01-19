@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HomeIcon, UserRoundIcon, UserCircle } from "lucide-react";
+import { HomeIcon, UserRoundIcon, UserCircle, LogOut } from "lucide-react";
 
 export default function Header() {
     return (
@@ -24,8 +24,11 @@ export default function Header() {
                             <UserCircle size={24} />
                         </button>
                     </Link>
-                    <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>Logout</button>
-
+                    <Link to="/">
+                        <button style={{ backgroundColor: 'transparent', borderRadius: '10px', padding: '10px' }}>
+                            <LogOut size={24}></LogOut>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

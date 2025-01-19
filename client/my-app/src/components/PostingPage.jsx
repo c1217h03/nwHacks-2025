@@ -7,9 +7,8 @@ export default function PostingPage() {
     const [posts, setPosts] = useState([]);
     const [error, setError] = useState(null);
 
-    // Fetch posts when the component mounts
     useEffect(() => {
-        axios.get('http://127.0.0.1:5000/post')  // Correct API URL for fetching posts
+        axios.get('http://127.0.0.1:5000/post')
             .then(response => {
                 setPosts(response.data);
             })
@@ -17,15 +16,16 @@ export default function PostingPage() {
                 setError('Error fetching posts');
                 console.error(error);
             });
+            document.title = 'Postings';
     }, []);
 
     return (
         <>
             <Header />
             <div className="posting-page">
-                <h1>Posts</h1>
+                <h1 className="posting-page-title">Community Posts</h1>
                 {error ? (
-                    <p>{error}</p>
+                    <p className="error-message">{error}</p>
                 ) : (
                     posts.length > 0 ? (
                         <div className="post-list">
@@ -34,11 +34,10 @@ export default function PostingPage() {
                             ))}
                         </div>
                     ) : (
-                        <p>No posts available</p>
+                        <p className="loading-message">Loading posts...</p>
                     )
                 )}
             </div>
         </>
     );
 }
-

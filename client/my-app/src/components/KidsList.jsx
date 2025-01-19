@@ -18,6 +18,7 @@ export default function KidsList() {
                 setError('Error fetching children data');  // Handle errors
                 console.error(error);
             });
+            document.title = 'All Children';
     }, []);  // Empty dependency array to run only once when the component mounts
 
     return (
@@ -34,7 +35,7 @@ export default function KidsList() {
                                 <Child key={child.child_id} child={child} />
                             ))
                         ) : (
-                            <p>No children available</p>  // If no children exist
+                            <p>Loading...</p>  // If no children exist
                         )
                     )}
                 </div>
