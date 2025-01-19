@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send } from 'lucide-react';
+import { Send, X } from 'lucide-react';
 
 export default function ChatWindow({ post, chatVisible, toggleChatWindow }) {
     function closeChatWindow() {
@@ -21,22 +21,24 @@ export default function ChatWindow({ post, chatVisible, toggleChatWindow }) {
                 <div className="chat-title">
                     <h3>Chat</h3>
                 </div>
-                <button onClick={closeChatWindow} className="close-button">X</button>
+                <button onClick={closeChatWindow} className="close-button"><X /></button>
 
             </div>
             <div>
                 {post ? (
                     <div className="chat-body">
-                        <div>
+                        <div className='description'>
                             <p><strong>Chatting about:</strong> {post.content}</p>
                             {/* Add more chat functionality */}
 
                         </div>
 
-                        <div class="chat-form">
-                            <input type="text" className="message" name="message"
-                                placeholder="Enter your message here" required />
-                            <button className="chat-submit" type="submit"> <Send className='send-icon' /> </button>
+                        <div className="form-container">
+                            <div class="chat-form">
+                                <input type="text" className="message" name="message"
+                                    placeholder="Enter your message here" required />
+                                <button className="chat-submit" type="submit"> <Send className='send-icon' /> </button>
+                            </div>
                         </div>
                     </div>
                 ) : (
