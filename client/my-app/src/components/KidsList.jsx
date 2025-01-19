@@ -34,7 +34,7 @@ export default function KidsList() {
                                 <Child key={child.child_id} child={child} />
                             ))
                         ) : (
-                            <p>No children available</p>  // If no children exist
+                            <p>Loading...</p>  // If no children exist
                         )
                     )}
                 </div>

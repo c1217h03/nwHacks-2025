@@ -1,33 +1,22 @@
 import React from 'react';
 
 export default function Post({ post }) {
-    if (post.post_type == "look_for_work") {
-        return (
-            <div className="post-card">
-                <div className="looking">
-                    <h4>Looking for work</h4>
-                </div>
-                <p>{post.content}</p>
-                <small>
-                    Posted by: {post.user_firstname} {post.user_lastname}
-                </small>
-                {post.child_firstname && (
-                    <div className="child-info">
-                        <strong>Child: </strong>{post.child_firstname}
-                    </div>
-                )}
-            </div>
-        );
-    }
+    const tagStyles = post.post_type === "look_for_work" ? "tag-looking" : "tag-needed";
+
     return (
         <div className="post-card">
-            <div className="needed">
-                <h4>Helper Needed</h4>
+            <div className={`post-tag ${tagStyles}`}>
+                {post.post_type === "look_for_work" ? "I Want to Help" : "Helper Needed"}
             </div>
-            <p>{post.content}</p>
-            <small>
+            <p className="post-content">{post.content}</p>
+            <small className="post-author">
                 Posted by: {post.user_firstname} {post.user_lastname}
             </small>
+            {post.post_type === "look_for_work" && post.child_firstname && (
+                <div className="child-info">
+                    <strong>Child: </strong>{post.child_firstname}
+                </div>
+            )}
         </div>
     );
 }
