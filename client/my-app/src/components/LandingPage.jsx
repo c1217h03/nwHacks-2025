@@ -8,10 +8,10 @@ export default function LandingPage() {
             <div style={{ textAlign: 'center' }}>
                 {/* <h1>Play Link!</h1> */}
                 <img src="../../public/name.png"></img>
-                <h4>Let's build a stronger community with all generations</h4>
+                <h4 className="subtitle">Let's build a stronger community with all generations</h4>
                 <div>
                     <Link to="/login">
-                        <button style={{ margin: '10px', padding: '10px 20px' }}>Log In</button>
+                        <button className="login-button2" style={{ margin: '10px', padding: '10px 20px', borderRadius: '10px', backgroundColor: "#845656", color: "white" }}>Log In</button>
                     </Link>
                 </div>
             </div>
