@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';  // Import Axios for making HTTP requests
 import Child from "./Child";
+import Header from "./Header";
 
 export default function KidsList() {
     const [children, setChildren] = useState([]);  // State to store fetched children data
     const [error, setError] = useState(null);       // State to handle errors
+
 
     // Fetch children data when the component mounts
     useEffect(() => {
@@ -20,16 +22,8 @@ export default function KidsList() {
 
     return (
         <div className="kids-list">
-            <div className="header-bar">
-                <div className="navbar">
-                    <img src="/logo.jpg" alt="Logo" className="logo" />
-                    <div className="nav-buttons">
-                        <button>Home</button>
-                        <button>Profile</button>
-                        <button>Logout</button>
-                    </div>
-                </div>
-            </div>
+            <Header />
+
 
             <div className="kids-list-body">
                 <div className="kids">
@@ -46,6 +40,6 @@ export default function KidsList() {
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

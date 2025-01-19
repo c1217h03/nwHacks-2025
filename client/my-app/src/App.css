@@ -12,17 +12,17 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #845656;
     padding: 10px 20px;
     box-sizing: border-box;
-    z-index: 1000;  /* Ensure navbar stays on top */
+    z-index: 1000;
+    /* Ensure navbar stays on top */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -46,10 +46,14 @@ body {
 
 /* Body Content */
 .kids-list-body {
-    width: 100%; /* Take full width of the screen */
-    padding-top: 70px;  /* Add space below navbar */
-    box-sizing: border-box;  /* Prevents content from overflowing */
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    width: 100%;
+    /* Take full width of the screen */
+    padding-top: 70px;
+    /* Add space below navbar */
+    box-sizing: border-box;
+    /* Prevents content from overflowing */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 .kids-list {
@@ -61,13 +65,25 @@ body {
 
 .kids {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* Allow wrapping of child cards */
     gap: 20px;
+    /* Space between child cards */
+    justify-content: flex-start;
+    /* left align rows */
+    padding: 20px;
+    /* Add some padding around the content */
 }
 
-/* Child Card Styles */
 .child-card {
-    margin-bottom: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    /* 3 cards per row, with gap adjustment */
+    max-width: calc(33.333% - 40px);
+    /* Prevent cards from growing too large */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    margin: 0;
+    /* Ensure no extra margins */
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -81,11 +97,108 @@ body {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.child-card p {
-    font-size: 16px;
-    margin: 8px 0;
+
+
+.login_form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2e2e2e;
+    color: rgba(255, 255, 255, 0.87);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.child-card strong {
-    color: #333;
+.login_form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.login_form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login_form input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.login_form input::placeholder {
+    color: #999999;
+}
+
+.login_form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login_form button:hover {
+    background-color: #357abd;
+}
+
+.kids-list-body {
+    width: 100%;
+    /* Take full width of the screen */
+    padding-top: 70px;
+    /* Add space below navbar */
+    box-sizing: border-box;
+    /* Prevents content from overflowing */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.kids-list {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kids {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping of child cards */
+    gap: 20px;
+    /* Space between child cards */
+    justify-content: flex-start;
+    /* left align rows */
+    padding: 20px;
+    /* Add some padding around the content */
+}
+
+.child-card {
+    flex: 1 1 calc(33.333% - 40px);
+    /* 3 cards per row, with gap adjustment */
+    max-width: calc(33.333% - 40px);
+    /* Prevent cards from growing too large */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    margin: 0;
+    /* Ensure no extra margins */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.child-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
