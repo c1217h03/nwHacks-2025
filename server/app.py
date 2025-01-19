@@ -240,7 +240,6 @@ def create_post():
         cursor.close()
         conn.close()
 
-#get all posts
 @app.route("/post", methods=["GET"])
 def get_all_posts():
     # Connect to the database
@@ -248,14 +247,17 @@ def get_all_posts():
     cursor = conn.cursor()
 
     try:
-        # Execute the query to get all posts
+        # Execute the query to get all posts along with related user and child information
         cursor.execute(
             """
-            SELECT post_id, post_type, content, user_id, child_id, post_status
-            FROM post;
+            SELECT p.post_id, p.post_type, p.content, u.user_id, u.firstname AS user_firstname, u.lastname AS user_lastname,
+                   c.child_id, c.firstname AS child_firstname
+            FROM post p
+            JOIN "user" u ON p.user_id = u.user_id
+            LEFT JOIN child c ON p.child_id = c.child_id;
             """
         )
-        
+
         # Fetch all rows from the query result
         posts = cursor.fetchall()
 
@@ -267,8 +269,10 @@ def get_all_posts():
                 "post_type": post[1],
                 "content": post[2],
                 "user_id": post[3],
-                "child_id": post[4],
-                "post_status": post[5]
+                "user_firstname": post[4],
+                "user_lastname": post[5],
+                "child_id": post[6],
+                "child_firstname": post[7] if post[7] else None  # Handle cases where child data might be missing
             })
 
         # Return the posts as JSON
@@ -281,6 +285,7 @@ def get_all_posts():
     finally:
         cursor.close()
         conn.close()
+
 
 #edit a post
 @app.route("/post/<int:post_id>", methods=["PUT"])

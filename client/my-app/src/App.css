@@ -202,3 +202,55 @@ body {
     transform: scale(1.02);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Flexbox Layout for the Post List */
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each post card */
+    padding: 20px; /* Add padding around content */
+}
+
+/* Post Card Styling */
+.post-card {
+    display: flex;
+    flex-direction: column; /* Stack elements inside each post card */
+    gap: 10px; /* Space between elements inside the card */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Ensure each post takes full width of its container */
+    max-width: 1200px; /* Set max width */
+    margin: 0 auto; /* Center align the post cards */
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for Post Content */
+.post-card h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Styling for the Posted By Section */
+.post-card small {
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+
+
