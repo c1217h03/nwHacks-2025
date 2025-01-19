@@ -11,5 +11,6 @@ Setup:
 
 - `npm install -g vite`
 - `npm install react-route-dom`
+- `npm install axios`
 
 - `npm run dev`
