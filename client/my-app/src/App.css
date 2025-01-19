@@ -3,3 +3,34 @@ body {
     height: 100%;
     margin: 0;
 }
+
+.child-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.child-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.child-card p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.child-card strong {
+    color: #333;
+}
+
+.kids-list-body {
+    width: 60vw;  /* Ensure it takes full width of the screen */
+    margin-top: 800px;  /* Add some padding at the top to prevent overlap with the navbar */
+    box-sizing: border-box;  /* To include padding in the width calculation */
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+}

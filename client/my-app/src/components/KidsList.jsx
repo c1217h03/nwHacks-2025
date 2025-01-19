@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';  // Import Axios for making HTTP requests
+import Child from "./Child";
 
 export default function KidsList() {
     const [children, setChildren] = useState([]);  // State to store fetched children data
@@ -36,11 +37,7 @@ export default function KidsList() {
                     ) : (
                         children.length > 0 ? (
                             children.map(child => (
-                                <div key={child.child_id}>
-                                    <p>First Name: {child.firstname}</p>
-                                    <p>Interests: {child.interests}</p>
-                                    <p>User ID: {child.user_id}</p>
-                                </div>
+                                <Child key={child.child_id} child={child} />
                             ))
                         ) : (
                             <p>No children available</p>  // If no children exist
