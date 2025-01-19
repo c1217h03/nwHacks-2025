@@ -16,6 +16,7 @@ export default function PostingPage() {
                 setError('Error fetching posts');
                 console.error(error);
             });
+            document.title = 'Postings';
     }, []);
 
     return (
