@@ -476,6 +476,24 @@ body {
     background-color: rgba(132, 86, 86, 0.47);
 }
 
+.child-card-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Add some space between the image and text */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.child-card-name-int {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    align-items: flex-start;
+    flex-shrink: 0; /* Prevent shrinking */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
 .child_image {
     width: 100%;
     max-width: 150px;
@@ -515,4 +533,19 @@ body {
 
 .chat-window {
     width: 30%;
+    max-width: 150px; /* Set max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Add space below the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    object-fit: cover; /* Ensure image is cropped properly */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.community-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #845656; /* Adjust to match your design */
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the title */
 }

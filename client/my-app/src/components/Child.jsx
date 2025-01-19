@@ -7,8 +7,9 @@ function Child({ child }) {
                 <img src={child.file_path} className = "child_image"></img>
                 <div className="child-card-name-int">
                     <div>
-                        <p><strong>Name:</strong> {child.firstname}</p>
-                        <p><strong>Interests:</strong> {child.interests}</p>
+                        <p><strong>{child.firstname}</strong></p>
+                        <p>Interests:</p>
+                        <p className = "interests">{child.interests}</p>
                     </div>
                 </div>
             </div>
